@@ -40,8 +40,8 @@ A sleek, dark-themed personal finance tracker built with React + Vite. Track exp
 ## Running Locally
 
 ```bash
-git clone https://github.com/adilsukumar/Finly_Personal_Finance.git
-cd Finly_Personal_Finance
+git clone https://github.com/adilsukumar/Finly-Personal-Finance.git
+cd Finly-Personal-Finance
 npm install
 cp .env.example .env   # set your PIN in .env
 npm run dev
