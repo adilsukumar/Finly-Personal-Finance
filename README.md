@@ -4,17 +4,23 @@
 
 I built Finly for the spending that happens between classes, outings and everyday plans—from a chai at a nearby café to a shared bill. It brings income, expenses, budget periods and IOUs into one browser-based workspace, with charts and exports to help me review the month.
 
+<a id="what-i-built"></a>
+
 ## <img src="assets/readme/icon-wallet.svg" width="30" height="30" alt=""/> What I built
 
 <p><picture><source media="(max-width: 600px)" srcset="assets/readme/features-mobile.svg"/><img src="assets/readme/features.svg" width="100%" alt="Income and expense records, personal/shared views, spending analytics, PDF reports and JSON backups."/></picture></p>
 
 Transactions include a date, amount, category, description and optional notes or paid-by details. Budget periods have their own opening balances and can follow a custom timeline rather than a strict calendar month.
 
+<a id="a-month-in-finly"></a>
+
 ## <img src="assets/readme/icon-pipeline.svg" width="30" height="30" alt=""/> A month in Finly
 
 <p><picture><source media="(max-width: 600px)" srcset="assets/readme/workflow-mobile.svg"/><img src="assets/readme/workflow.svg" width="100%" alt="Create a budget period, record transactions, review patterns and IOUs, then export a report or backup."/></picture></p>
 
 The dashboard summarizes income, expenses and balances for the selected period. Analytics include category charts, daily spending, trends and top expenses. The dashboard’s jsPDF export assembles a financial report with summaries, charts, transaction details, spending breakdowns and IOUs. The report is generated from your stored records; it is separate from a restorable JSON backup.
+
+<a id="personal-and-shared"></a>
 
 ## <img src="assets/readme/icon-people.svg" width="30" height="30" alt=""/> Personal and shared
 
@@ -25,6 +31,8 @@ The current app is personalized around Adil and Snehal in shared-account attribu
 Personal transactions can be mirrored into an existing active shared period. Edits to those personal records update their linked mirrors. Both views use the same browser’s local store—“shared” does not mean live collaboration across devices.
 
 IOUs record the direction of money owed and whether it has been settled. Settlement handling can add the corresponding income or expense transaction to the active account.
+
+<a id="run-locally"></a>
 
 ## <img src="assets/readme/icon-terminal.svg" width="30" height="30" alt=""/> Run locally
 
@@ -62,6 +70,8 @@ These scripts are declared in `package.json`. The build targets `dist/`; the pre
 | PDF reports | jsPDF |
 | Persistence | Browser localStorage |
 
+<a id="storage-backups-and-pin"></a>
+
 ## <img src="assets/readme/icon-local.svg" width="30" height="30" alt=""/> Storage, backups and PIN
 
 <p><picture><source media="(max-width: 600px)" srcset="assets/readme/storage-mobile.svg"/><img src="assets/readme/storage.svg" width="100%" alt="Browser-local records, Settings JSON export/import, and a local Shared-account PIN screen."/></picture></p>
@@ -71,6 +81,8 @@ Financial records are stored in browser `localStorage`. This project has no appl
 Use **Settings → Export JSON** to download transactions, IOUs, budget months and settings. **Import Data** restores the supplied data groups and replaces their existing contents. The backup does not include the PIN hash or all month-prompt preferences. Keep a current backup before importing or clearing data.
 
 The Shared-account PIN uses Web Crypto PBKDF2 with SHA-256 and 200,000 iterations. The local verification flow locks after five failed attempts for 30 minutes. This is a browser access screen, not encryption of the financial records or server-side authentication. Someone with access to the browser’s storage can inspect or alter that state.
+
+<a id="explore-the-source"></a>
 
 ## <img src="assets/readme/icon-docs.svg" width="30" height="30" alt=""/> Explore the source
 
